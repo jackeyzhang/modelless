@@ -8,14 +8,15 @@ import org.springframework.data.mongodb.core.MongoOperations;
 import org.springframework.data.mongodb.core.MongoTemplate;
 import org.springframework.data.mongodb.core.query.Query;
 
-import com.mongodb.Mongo;
+import com.mongodb.MongoClient;
 
 public class MongoApp {
+	
 	private static final Log log = LogFactory.getLog(MongoApp.class);
 
 	public static void main(String[] args) throws Exception {
 
-		MongoOperations mongoOps = new MongoTemplate(new Mongo(), "database");
+		MongoOperations mongoOps = new MongoTemplate(new MongoClient(), "database");
 		mongoOps.insert(new Person("Joe", 34));
 
 		log.info(mongoOps.findOne(new Query(where("name").is("Joe")),
