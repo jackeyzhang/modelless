@@ -26,6 +26,10 @@ public class ApplicationSpring {
 		entity1.setRegionName("北京");
 		entity1.setWorks(1);
 		userDao.insert(entity1);
+		NameEntity name = new NameEntity();
+		name.setNickname("nickname");
+		name.setUsername("username");
+		entity1.setName(name);
 		userDao.update(entity1);
 		userDao.createCollection();
 	
