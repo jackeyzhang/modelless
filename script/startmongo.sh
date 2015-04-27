@@ -1,0 +1,1 @@
+/Users/jackymac/Downloads/mongodb/bin/mongod --dbpath ../data/
