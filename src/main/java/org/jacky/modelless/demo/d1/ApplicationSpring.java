@@ -9,7 +9,8 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 public class ApplicationSpring {
 
-	public static void main(String[] args) {
+	@SuppressWarnings("resource")
+  public static void main(String[] args) {
 
 		System.out.println("Bootstrapping HelloMongo");
 
