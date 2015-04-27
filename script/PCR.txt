@@ -1,0 +1,2 @@
+PCR001:
+设计一个基于mongodb的web快速开发框架，让developer只关注UI设计，更少关注在model的操作上，让document table真正快起来。

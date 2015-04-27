@@ -17,7 +17,7 @@ public class MongoApp {
 	public static void main(String[] args) throws Exception {
 
 		MongoOperations mongoOps = new MongoTemplate(new MongoClient(), "database");
-		mongoOps.insert(new Person("Joe", 34));
+//		mongoOps.insert(new Person("Joe", 34));
 
 		log.info(mongoOps.findOne(new Query(where("name").is("Joe")),
 				Person.class));
