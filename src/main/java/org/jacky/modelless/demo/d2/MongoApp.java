@@ -1,4 +1,4 @@
-package org.jacky.modelless.demo;
+package org.jacky.modelless.demo.d2;
 
 import static org.springframework.data.mongodb.core.query.Criteria.where;
 

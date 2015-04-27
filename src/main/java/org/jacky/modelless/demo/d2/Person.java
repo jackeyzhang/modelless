@@ -1,4 +1,4 @@
-package org.jacky.modelless.demo;
+package org.jacky.modelless.demo.d2;
 
 public class Person {
 	private String id;
