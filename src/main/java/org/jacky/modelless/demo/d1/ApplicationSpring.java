@@ -28,8 +28,8 @@ public class ApplicationSpring {
 		entity1.setWorks(1);
 		userDao.insert(entity1);
 		NameEntity name = new NameEntity();
-		name.setNickname("nickname");
-		name.setUsername("username");
+		name.setNickname("jacky");
+		name.setUsername("jacky");
 		entity1.setName(name);
 		userDao.update(entity1);
 		userDao.createCollection();
@@ -47,11 +47,13 @@ public class ApplicationSpring {
 		}
 
 		UserEntity e = userDao.findOne("1");
+		if(e != null)
 		System.out.println("id=1 - id=" + e.getId() + ", age=" + e.getAge() + ", password=" + e.getPassword() + ", regionName=" + e.getRegionName() + ", special=" + Arrays.toString(e.getSpecial())
 				+ ", name=" + e.getName().getUsername() + "-" + e.getName().getNickname() + ", birth=" + e.getBirth());
 
-		e = userDao.findOneByUsername("limingnihao");
-		System.out.println("username=limingnihao - id=" + e.getId() + ", age=" + e.getAge() + ", password=" + e.getPassword() + ", regionName=" + e.getRegionName() + ", special="
+		e = userDao.findOneByUsername("jacky");
+		if(e != null)
+		System.out.println("username=jacky - id=" + e.getId() + ", age=" + e.getAge() + ", password=" + e.getPassword() + ", regionName=" + e.getRegionName() + ", special="
 				+ Arrays.toString(e.getSpecial()) + ", name=" + e.getName().getUsername() + "-" + e.getName().getNickname() + ", birth=" + e.getBirth());
 
 		
