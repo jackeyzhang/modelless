@@ -14,7 +14,7 @@ import org.springframework.data.mongodb.core.mapping.Document;
  *
  */
 
-@Document(collection = "customer")
+@Document(collection = "user")
 public class User extends Entity {
   
   private static final long serialVersionUID = -1581215666113058977L;
@@ -27,6 +27,7 @@ public class User extends Entity {
   
   private String sexy;
   
+  private Role role;
   
   public String getIdentity() {
     return identity;
@@ -74,10 +75,20 @@ public class User extends Entity {
     this.sexy = sexy;
   }
 
+  
+  public Role getRole() {
+    return role;
+  }
+
+  public void setRole( Role role ) {
+    this.role = role;
+  }
+
+
 
   @Override
   public String toString() {
-    return "User [identity=" + identity + ", name=" + name + ", birthday=" + birthday + ", sexy=" + sexy + "]";
+    return "User [name=" + name + ", birthday=" + birthday + ", sexy=" + sexy + ", role=" + (null == role? "" : role.toString()) + "]";
   }
 
 }
