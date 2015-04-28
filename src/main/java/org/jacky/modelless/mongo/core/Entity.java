@@ -1,6 +1,7 @@
 package org.jacky.modelless.mongo.core;
 
 import java.io.Serializable;
+import java.util.UUID;
 
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.query.Update;
@@ -13,6 +14,9 @@ public class Entity extends Update implements Serializable{
   @Id
   private String id;
 
+  public Entity( ) {
+    this.id = UUID.randomUUID().toString();
+  }
   
   public Entity( String id ) {
     super();

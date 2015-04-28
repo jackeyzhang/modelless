@@ -19,7 +19,7 @@ public class App {
 
     UserDao userDao = context.getBean( UserDao.class );
     
-    User user = new User("123456");
+    User user = new User();
     user.setBirthday( new Date() );
     user.setIdentity( "jzhang12" );
     user.setSexy( "男" );

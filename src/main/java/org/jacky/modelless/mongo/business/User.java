@@ -27,11 +27,6 @@ public class User extends Entity {
   
   private String sexy;
   
-
-  public User( String id ) {
-    super( id );
-  }
-
   
   public String getIdentity() {
     return identity;
