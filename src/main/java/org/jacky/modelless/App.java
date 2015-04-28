@@ -15,8 +15,7 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 public class App {
 
   public static void main( String[] args ) {
-    ConfigurableApplicationContext context = null;
-    context = new ClassPathXmlApplicationContext( "applicationContext.xml" );
+    ConfigurableApplicationContext context = new ClassPathXmlApplicationContext( "applicationContext.xml" );
 
     UserDao userDao = context.getBean( UserDao.class );
     
@@ -30,5 +29,7 @@ public class App {
     
     User u = userDao.findOne( "123456", User.class );
     System.out.println(u.toString());
+    
+    context.close();
   }
 }
