@@ -19,5 +19,7 @@ public interface BaseDao<T extends Entity> {
   public void insert( T entity );
 
   public void update( T entity );
+  
+  public void clear( Class<T> cls);
 
 }
