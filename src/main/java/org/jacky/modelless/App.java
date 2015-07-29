@@ -2,13 +2,8 @@ package org.jacky.modelless;
 
 import java.util.Date;
 
-import org.jacky.modelless.mongo.business.data.Resource;
-import org.jacky.modelless.mongo.business.data.ResourceDao;
-import org.jacky.modelless.mongo.business.data.Role;
-import org.jacky.modelless.mongo.business.data.RoleDao;
 import org.jacky.modelless.mongo.business.data.User;
 import org.jacky.modelless.mongo.business.data.UserDao;
-import org.jacky.modelless.mongo.core.DefaultDao;
 import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
